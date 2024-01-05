@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Porfolio Website</title>
+        <script src="https://kit.fontawesome.com/a248030ffa.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <img src="logo.png" class="logo"
+            width="170"
+            height="170">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Welcome</p>
+            <h1>I'm <span>Thuy Nguyen</span> from Vietnam</h1>
+        </div>
+    </div>
+</div>
+<!----about section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="About.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle"> About Me </h1>
+                <br>
+                <p style="width: 750px; font-size: 16px; line-height: 1.5;">Hello, I am a first-year <span style="color: #bc987e;"> Data Science </span> student at <span style="color: #bc987e;">University of California, Irvine (UCI)</span>.<br>As a freshman, I am looking for opportunities that can help me to harness the power of big data for positive global change. 
+                    My interest lies in exploring the use of data in <span style="color: #bc987e;"> cybersecurity and BFSI (algorithm trading, risk modeling, and securing customer data)</span>.</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')"> My skills</p>
+                <p class="tab-links" onclick="opentab('education')"> My education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Proficient in Python</span><br><br></li>
+                    <li>Familiar with HTML and CSS<br><br></li>
+                    <li>Developing expertise in JavaScript, SQL, and R<br><br></li>
+                    <li>Getting familiar with data visualization, data structure and algorithms, machine learning algorithms</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2019-2023</span><br><br>Highschool<br><br>The American School of Vietnam</li><br>&#128205 HCMC, Vietnam<br><br>
+                    <li><span>Expected 2027</span><br><br>B.S. Data Science<br><br>University of California, Irvine (UCI)</li><br>&#128205 Irvine, CA (92617)<br><br>
+                    
+                </ul>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----Experience section---->
+<div id="experience">
+    <div class="container">
+        <h1 class="subtitle"> My Experience </h1>
+        <div class="experience-list">
+            <div>
+                <i class="fa-solid fa-file-code"></i>
+                <h2 style="color: #bc7e7e;">Personal Projects</h2>
+                <ul style="font-size: medium;">
+                    <li>Rock Paper Scissors</li>
+                    <li>Sokoban Game</li>
+                </ul>
+                <a href="https://github.com/thuyng11">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-bullhorn"></i>
+                <h2 style="color: #bc7e7e;">Extracurriculum</h2>
+                <ul style="font-size: medium;">
+                    <li>Make A Smile Foundation (Co-founder)</li>
+                    <li>The Stratic (Finance and Event)</li>
+                </ul>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-briefcase"></i>
+                <h2 style="color: #bc7e7e;">Professional</h2>
+                <ul style="font-size: medium;">
+                <li>Academic Tutor for AP Statistics/AP Psychology/IELTS Academic Testing @ Hands For Hands</li>
+                </ul>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------Contact section-------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> thuyn18@uci.edu</p>
+                <p><i class="fa-solid fa-phone-volume"></i> (+1) 424 4637 473</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/mthuy_nguyenn/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/mthuynguyen01/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/thuynguyenvm/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                
+                <a download href="Personal Portfolio/images/Thuy_Nguyen_Resume.pdf" class="btn btn2">Download Resume</a>
+
+
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter your name" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <textarea name="Message" rows="6" placeholder="Enter your Message"></textarea>
+                    <button class="button" type="submit">Send me!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="thankyou">
+        <p>Thank you for visiting <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+    <!---Remove/Add when click-->
+    
+<script>
+
+    var aboutlinks = document.getElementsByClassName("tab-links");
+    var aboutcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(aboutlink of aboutlinks){
+            aboutlink.classList.remove("active-link");
+        }
+        for(aboutcontent of aboutcontents){
+            aboutcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function openmenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+
+</body>
+</html>
